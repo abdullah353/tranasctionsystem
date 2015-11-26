@@ -1,6 +1,5 @@
 "use strict";
 
-
 /*
  * Starting app on DOM ready event.
  */
@@ -27,6 +26,7 @@ function validateForm() {
     if (sum % 10 === 0) {
         return true;
     }
+
     alert("CardNumber is Not Valid");
     return false;
 }
@@ -194,7 +194,6 @@ var Transactions = {
         alert(message);
     }
 };
-
 
 /*
  * Definig Our Edit Transaction Popup Model
