@@ -2,7 +2,7 @@
 
 1. 'transactions.tsv' -- tab-separated file with the following data columns:
 
-  1a) ~~Created (Datetime),
+  1a) ~~Created (Datetime)~~,
 
   1b) Amount (Float ###.##),
 
