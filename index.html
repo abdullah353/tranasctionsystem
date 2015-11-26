@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Transaction Manager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/resources/css/ext-all.css">
+</head>
+
+<body>
+
+  <section id="container-wrapper"></section>
+
+  <footer>
+    <button id="delete"> x | Delete </button>
+
+    <button id="edit"> Edit </button>
+    
+    <br>
+
+    <form name="transaction" action="router.php" method="POST" onsubmit="return validateForm()">
+      <input type="text" name="Created" class="created" required
+        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}"
+        placeholder="Created datetime">
+
+      <input type="text" name="CardholderName" class="cardholder-name" required
+        placeholder="Card Holder Name">
+
+      <input type="text" name="CardNumber" class="cardnumber" required
+        placeholder="Card Number">
+
+      <select class="status" name="Status" required>
+        <option selected value="Approved">Approved</option>
+        <option value="Declined">Declined</option>
+      </select>
+
+      <input type="text" name="CVV" class="cvv" required
+        placeholder="CVV" pattern="[0-9]{3}">
+
+      <input type="number" name="ExpiredM" min="01" max="12" class="expiry-month" required
+        placeholder="MM">/
+
+      <input type="number" name="ExpiredY" min="00" max="45" class="expiry-year" required
+        placeholder="YY">
+
+      <input type="float" name="Amount" class="amount" required
+        placeholder="Amount" pattern="[0-9]+.[0-9]+">
+
+      <button id="add"> Add </button>
+    </form>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/adapter/ext/ext-base.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/3.4.1-1/ext-all.js"></script>
+  <script src="app.js"></script>
+</body>
